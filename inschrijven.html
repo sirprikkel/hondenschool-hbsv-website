@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inschrijven — Hondenschool HBSV Boxmeer</title>
+  <meta name="description" content="Schrijf je in voor een cursus bij Hondenschool HBSV Boxmeer.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#7C3AED', 'primary-light': '#A78BFA', 'primary-dark': '#4C1D95', cta: '#22C55E', 'cta-hover': '#16A34A', bg: '#FAF5FF', peach: '#FDBCB4', babyblue: '#ADD8E6', mint: '#98FF98', lilac: '#E6E6FA' },
+          fontFamily: { heading: ['Varela Round','sans-serif'], body: ['Nunito Sans','sans-serif'] },
+          borderRadius: { 'clay': '20px' },
+        }
+      }
+    }
+  </script>
+  <style>
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+    .clay-card { border-radius: 20px; border: 3px solid rgba(124,58,237,0.15); box-shadow: inset -2px -2px 8px rgba(255,255,255,0.8), 4px 4px 12px rgba(124,58,237,0.12); background: #FFF; }
+    .clay-btn { border-radius: 16px; border: 3px solid transparent; box-shadow: inset -1px -1px 4px rgba(255,255,255,0.6), 3px 3px 8px rgba(0,0,0,0.1); transition: transform 200ms ease-out; cursor: pointer; }
+    .clay-btn:active { transform: scale(0.97); }
+    .clay-input { border-radius: 16px; border: 3px solid rgba(124,58,237,0.15); box-shadow: inset 1px 1px 4px rgba(124,58,237,0.05); transition: border-color 200ms; }
+    .clay-input:focus { border-color: #7C3AED; outline: none; box-shadow: inset 1px 1px 4px rgba(124,58,237,0.05), 0 0 0 3px rgba(124,58,237,0.1); }
+    html { scroll-behavior: smooth; } body { font-family: 'Nunito Sans', sans-serif; } h1,h2,h3,h4,h5,h6 { font-family: 'Varela Round', sans-serif; }
+    .mobile-menu { transform: translateX(100%); transition: transform 300ms ease-out; } .mobile-menu.open { transform: translateX(0); }
+  </style>
+</head>
+<body class="bg-bg text-primary-dark">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b-3 border-primary/10 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="flex items-center gap-3 cursor-pointer"><img src="images/logo.png" alt="HBSV Logo" class="h-10 md:h-12 rounded-lg"><span class="font-heading text-lg md:text-xl text-primary-dark">HBSV</span></a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Home</a>
+        <a href="cursussen.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Cursussen</a>
+        <a href="team.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Team</a>
+        <a href="galerij.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Galerij</a>
+        <a href="contact.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Contact</a>
+        <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-5 py-2.5 hover:bg-cta-hover min-h-[44px] flex items-center">Inschrijven</a>
+      </div>
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('open')" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu">
+        <svg class="w-7 h-7 text-primary-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-white z-50 shadow-2xl p-6 flex flex-col gap-4">
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('open')" class="self-end min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Sluiten">
+        <svg class="w-7 h-7 text-primary-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <a href="index.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Home</a>
+      <a href="cursussen.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Cursussen</a>
+      <a href="team.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Team</a>
+      <a href="galerij.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Galerij</a>
+      <a href="contact.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Contact</a>
+      <a href="inschrijven.html" class="font-heading text-lg text-primary py-2 cursor-pointer">Inschrijven</a>
+    </div>
+  </nav>
+
+  <!-- Form -->
+  <section class="py-12 md:py-16 px-4 md:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto">
+      <h1 class="font-heading text-4xl text-primary-dark mb-4 text-center">Inschrijven</h1>
+      <p class="font-body text-primary-dark/60 mb-8 text-center">Vul onderstaand formulier in om je in te schrijven voor een cursus.</p>
+
+      <form action="mailto:hondenschoolhbsv@gmail.com" method="POST" enctype="text/plain" class="clay-card p-6 md:p-8 space-y-5">
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Voornaam *</label>
+            <input type="text" name="voornaam" required class="clay-input w-full px-4 py-3 font-body min-h-[44px]">
+          </div>
+          <div>
+            <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Achternaam *</label>
+            <input type="text" name="achternaam" required class="clay-input w-full px-4 py-3 font-body min-h-[44px]">
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Straat en huisnummer *</label>
+            <input type="text" name="adres" required class="clay-input w-full px-4 py-3 font-body min-h-[44px]">
+          </div>
+          <div>
+            <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Postcode *</label>
+            <input type="text" name="postcode" required class="clay-input w-full px-4 py-3 font-body min-h-[44px]">
+          </div>
+        </div>
+
+        <div>
+          <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Woonplaats *</label>
+          <input type="text" name="woonplaats" required class="clay-input w-full px-4 py-3 font-body min-h-[44px]">
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="font-body font-semibold text-sm text-primary-dark block mb-1">E-mailadres *</label>
+            <input type="email" name="email" required class="clay-input w-full px-4 py-3 font-body min-h-[44px]">
+          </div>
+          <div>
+            <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Telefoonnummer *</label>
+            <input type="tel" name="telefoon" required class="clay-input w-full px-4 py-3 font-body min-h-[44px]">
+          </div>
+        </div>
+
+        <hr class="border-primary/10">
+        <h3 class="font-heading text-lg text-primary-dark">Gegevens hond</h3>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Naam hond *</label>
+            <input type="text" name="naam_hond" required class="clay-input w-full px-4 py-3 font-body min-h-[44px]">
+          </div>
+          <div>
+            <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Geboortedatum hond *</label>
+            <input type="date" name="geboortedatum_hond" required class="clay-input w-full px-4 py-3 font-body min-h-[44px]">
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Ras *</label>
+            <input type="text" name="ras" required class="clay-input w-full px-4 py-3 font-body min-h-[44px]">
+          </div>
+          <div>
+            <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Geslacht *</label>
+            <select name="geslacht" required class="clay-input w-full px-4 py-3 font-body min-h-[44px] cursor-pointer bg-white">
+              <option value="">Kies...</option>
+              <option>Reu</option>
+              <option>Teef</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Cursus *</label>
+          <select name="cursus" required class="clay-input w-full px-4 py-3 font-body min-h-[44px] cursor-pointer bg-white">
+            <option value="">Kies een cursus...</option>
+            <option>Puppy Start (€80, 8 lessen)</option>
+            <option>Puppy Vervolg</option>
+            <option>Puberklas</option>
+            <option>Basiscursus</option>
+            <option>De Leuke Huishond</option>
+            <option>Fun & Focus</option>
+            <option>Agility (€110, 12 lessen)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="font-body font-semibold text-sm text-primary-dark block mb-1">Opmerkingen (optioneel)</label>
+          <textarea name="opmerkingen" rows="3" class="clay-input w-full px-4 py-3 font-body" placeholder="Bijv. eerder gevolgde cursussen, bijzonderheden..."></textarea>
+        </div>
+
+        <button type="submit" class="clay-btn bg-cta text-white font-bold px-10 py-3 text-lg hover:bg-cta-hover min-h-[44px] w-full sm:w-auto">Inschrijving versturen</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary-dark text-white py-12 px-4 md:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+      <div><div class="flex items-center gap-3 mb-4"><img src="images/logo.png" alt="HBSV Logo" class="h-10 rounded-lg brightness-200"><span class="font-heading text-xl">HBSV Boxmeer</span></div><p class="font-body text-white/70 text-sm">Al meer dan 25 jaar een vereniging in beweging!</p></div>
+      <div><h4 class="font-heading text-lg mb-3">Pagina's</h4><ul class="space-y-2 text-sm text-white/70"><li><a href="index.html" class="hover:text-white cursor-pointer">Home</a></li><li><a href="cursussen.html" class="hover:text-white cursor-pointer">Cursussen</a></li><li><a href="contact.html" class="hover:text-white cursor-pointer">Contact</a></li></ul></div>
+      <div><h4 class="font-heading text-lg mb-3">Contact</h4><ul class="space-y-2 text-sm text-white/70"><li>Sint Cornelisstraat 25, 5827 AJ Vortum-Mullem</li><li><a href="mailto:hondenschoolhbsv@gmail.com" class="hover:text-white cursor-pointer">hondenschoolhbsv@gmail.com</a></li></ul></div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-white/10 text-center text-sm text-white/50"><p>Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white cursor-pointer underline">Code Lieshout</a></p></div>
+  </footer>
+
+</body>
+</html>

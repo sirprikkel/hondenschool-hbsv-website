@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursussen — Hondenschool HBSV Boxmeer</title>
+  <meta name="description" content="Overzicht van alle cursussen bij HBSV: Puppy Start, Puppy Vervolg, Puberklas, Basiscursus, De Leuke Huishond, Fun & Focus en Agility.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7C3AED', 'primary-light': '#A78BFA', 'primary-dark': '#4C1D95',
+            cta: '#22C55E', 'cta-hover': '#16A34A', bg: '#FAF5FF',
+            peach: '#FDBCB4', babyblue: '#ADD8E6', mint: '#98FF98', lilac: '#E6E6FA',
+          },
+          fontFamily: { heading: ['Varela Round','sans-serif'], body: ['Nunito Sans','sans-serif'] },
+          borderRadius: { 'clay': '20px', 'clay-lg': '24px' },
+        }
+      }
+    }
+  </script>
+  <style>
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+    .clay-card { border-radius: 20px; border: 3px solid rgba(124,58,237,0.15); box-shadow: inset -2px -2px 8px rgba(255,255,255,0.8), 4px 4px 12px rgba(124,58,237,0.12); background: #FFF; transition: transform 200ms ease-out, box-shadow 200ms ease-out; }
+    .clay-card:hover { transform: translateY(-4px); box-shadow: inset -2px -2px 8px rgba(255,255,255,0.8), 6px 8px 18px rgba(124,58,237,0.18); }
+    .clay-btn { border-radius: 16px; border: 3px solid transparent; box-shadow: inset -1px -1px 4px rgba(255,255,255,0.6), 3px 3px 8px rgba(0,0,0,0.1); transition: transform 200ms ease-out, box-shadow 100ms ease-out; cursor: pointer; }
+    .clay-btn:active { transform: scale(0.97); box-shadow: inset 1px 1px 4px rgba(0,0,0,0.1), 1px 1px 4px rgba(0,0,0,0.05); }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Nunito Sans', sans-serif; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Varela Round', sans-serif; }
+    .mobile-menu { transform: translateX(100%); transition: transform 300ms ease-out; }
+    .mobile-menu.open { transform: translateX(0); }
+  </style>
+</head>
+<body class="bg-bg text-primary-dark">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b-3 border-primary/10 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="flex items-center gap-3 cursor-pointer">
+        <img src="images/logo.png" alt="HBSV Logo" class="h-10 md:h-12 rounded-lg">
+        <span class="font-heading text-lg md:text-xl text-primary-dark">HBSV</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Home</a>
+        <a href="cursussen.html" class="font-body font-semibold text-primary hover:text-primary-dark transition-colors duration-200 cursor-pointer">Cursussen</a>
+        <a href="team.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Team</a>
+        <a href="galerij.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Galerij</a>
+        <a href="contact.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Contact</a>
+        <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-5 py-2.5 hover:bg-cta-hover min-h-[44px] flex items-center">Inschrijven</a>
+      </div>
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('open')" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu">
+        <svg class="w-7 h-7 text-primary-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-white z-50 shadow-2xl p-6 flex flex-col gap-4">
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('open')" class="self-end min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Sluiten">
+        <svg class="w-7 h-7 text-primary-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <a href="index.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Home</a>
+      <a href="cursussen.html" class="font-heading text-lg text-primary py-2 cursor-pointer">Cursussen</a>
+      <a href="team.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Team</a>
+      <a href="galerij.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Galerij</a>
+      <a href="contact.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Contact</a>
+      <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-5 py-3 text-center hover:bg-cta-hover cursor-pointer mt-4">Inschrijven</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="py-12 md:py-16 px-4 md:px-6 lg:px-8 text-center">
+    <h1 class="font-heading text-4xl md:text-5xl text-primary-dark mb-4">Ons cursusaanbod</h1>
+    <p class="font-body text-lg text-primary-dark/60 max-w-2xl mx-auto">Les op woensdagavond, maandagavond en zondagochtend. Positieve methode, kleine groepen.</p>
+  </section>
+
+  <!-- Lestijden -->
+  <section class="pb-12 px-4 md:px-6 lg:px-8">
+    <div class="max-w-3xl mx-auto clay-card p-6 md:p-8">
+      <h2 class="font-heading text-xl text-primary-dark mb-4">Lestijden</h2>
+      <div class="grid sm:grid-cols-3 gap-4 text-sm">
+        <div class="bg-lilac/30 rounded-clay p-4 text-center">
+          <div class="font-bold text-primary-dark">Woensdag</div>
+          <div class="text-primary-dark/60">19:00 – 19:45</div>
+          <div class="text-primary-dark/60">20:15 – 21:00</div>
+          <div class="text-xs text-primary-dark/40 mt-1">Puppy Start t/m Agility</div>
+        </div>
+        <div class="bg-babyblue/30 rounded-clay p-4 text-center">
+          <div class="font-bold text-primary-dark">Maandag</div>
+          <div class="text-primary-dark/60">19:30 – 20:15</div>
+          <div class="text-xs text-primary-dark/40 mt-1">Basiscursus</div>
+        </div>
+        <div class="bg-mint/30 rounded-clay p-4 text-center">
+          <div class="font-bold text-primary-dark">Zondag</div>
+          <div class="text-primary-dark/60">09:00 – 09:45</div>
+          <div class="text-xs text-primary-dark/40 mt-1">Agility</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cursussen -->
+  <section class="pb-16 px-4 md:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto space-y-8">
+
+      <!-- Puppy Start -->
+      <div id="puppy-start" class="clay-card p-6 md:p-8 flex flex-col md:flex-row gap-6">
+        <div class="md:w-48 flex-shrink-0">
+          <img src="images/google/google_place_3.jpg" alt="Puppy training" class="w-full h-40 md:h-full object-cover rounded-clay" loading="lazy">
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-heading text-2xl text-primary-dark">Puppy Start</h3>
+            <span class="clay-btn bg-peach/50 text-primary-dark font-bold px-4 py-1 text-sm">€80</span>
+          </div>
+          <div class="flex gap-4 text-xs text-primary-dark/50 mb-3">
+            <span>8 lessen</span> <span>Pups 2-4 mnd</span> <span>Certificaat</span>
+          </div>
+          <p class="font-body text-primary-dark/70 text-sm mb-3">Gefeliciteerd met je nieuwe huisgenoot! De eerste maanden van een puppy zijn cruciaal voor de rest van zijn leven. In onze cursus Puppy Start draait alles om een fijne start in de mensenwereld.</p>
+          <p class="font-body text-primary-dark/70 text-sm mb-3">Bij HBSV geloven we dat een goede opvoeding begint bij een sterke band. Daarom staat contact en binding met de baas bij ons centraal. We leren je niet alleen wát je de hond moet leren, maar vooral ook hoe een hond leert.</p>
+          <p class="font-body text-primary-dark/60 text-xs">Oefeningen: Aandacht, Zit/Af/Blijf, Wandelen aan lijn, Hierkomen, PuppyGym. Inclusief één buitenles en feestelijke afsluiting.</p>
+          <div class="mt-4">
+            <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-6 py-2.5 text-sm hover:bg-cta-hover inline-block cursor-pointer">Inschrijven</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Puppy Vervolg -->
+      <div id="puppy-vervolg" class="clay-card p-6 md:p-8">
+        <h3 class="font-heading text-2xl text-primary-dark mb-2">Puppy Vervolg</h3>
+        <div class="flex gap-4 text-xs text-primary-dark/50 mb-3">
+          <span>Pups 4-6 mnd</span> <span>Woensdagavond</span>
+        </div>
+        <p class="font-body text-primary-dark/70 text-sm mb-3">Bij deze cursus bouwen we stap voor stap verder aan het fundament wat jullie eerder in de cursus Puppy Start hebben gelegd.</p>
+        <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-6 py-2.5 text-sm hover:bg-cta-hover inline-block cursor-pointer">Inschrijven</a>
+      </div>
+
+      <!-- Puberklas -->
+      <div id="puberklas" class="clay-card p-6 md:p-8">
+        <h3 class="font-heading text-2xl text-primary-dark mb-2">Puberklas</h3>
+        <div class="flex gap-4 text-xs text-primary-dark/50 mb-3">
+          <span>Vanaf ~6 mnd</span> <span>Woensdagavond</span>
+        </div>
+        <p class="font-body text-primary-dark/70 text-sm mb-3">Na de cursus Puppy Vervolg kun je de volgende stap in de opvoeding nemen tijdens de Puberklas. Hierbij draait alles om het behouden van een fijne band en het leren omgaan met de perikelen die de pubertijd van je hond met zich meebrengt.</p>
+        <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-6 py-2.5 text-sm hover:bg-cta-hover inline-block cursor-pointer">Inschrijven</a>
+      </div>
+
+      <!-- Basiscursus -->
+      <div id="basiscursus" class="clay-card p-6 md:p-8">
+        <h3 class="font-heading text-2xl text-primary-dark mb-2">Basiscursus</h3>
+        <div class="flex gap-4 text-xs text-primary-dark/50 mb-3">
+          <span>Beginners & herplaatsers</span> <span>Maandagavond 19:30</span>
+        </div>
+        <p class="font-body text-primary-dark/70 text-sm mb-3">De Basiscursus is voor honden en baasjes die nog geen eerdere training hebben gevolgd bij een hondenschool of herplaatsers die de basis nog moeten leren.</p>
+        <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-6 py-2.5 text-sm hover:bg-cta-hover inline-block cursor-pointer">Inschrijven</a>
+      </div>
+
+      <!-- De Leuke Huishond -->
+      <div id="leuke-huishond" class="clay-card p-6 md:p-8">
+        <h3 class="font-heading text-2xl text-primary-dark mb-2">De Leuke Huishond</h3>
+        <div class="flex gap-4 text-xs text-primary-dark/50 mb-3">
+          <span>Gevorderden</span> <span>Woensdagavond</span>
+        </div>
+        <p class="font-body text-primary-dark/70 text-sm mb-3">In de cursus De Leuke Huishond zetten we de puntjes op de i. Samenwerken en plezier staan voorop, terwijl we de lat van gehoorzaamheid en beheersing subtiel een stukje hoger leggen.</p>
+        <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-6 py-2.5 text-sm hover:bg-cta-hover inline-block cursor-pointer">Inschrijven</a>
+      </div>
+
+      <!-- Fun & Focus -->
+      <div id="fun-focus" class="clay-card p-6 md:p-8">
+        <h3 class="font-heading text-2xl text-primary-dark mb-2">Fun & Focus</h3>
+        <div class="flex gap-4 text-xs text-primary-dark/50 mb-3">
+          <span>Gevorderden</span> <span>Woensdagavond</span>
+        </div>
+        <p class="font-body text-primary-dark/70 text-sm mb-3">In de cursus Fun & Focus draait alles om de combinatie van gehoorzaamheid, spel en het ontdekken van nieuwe talenten. Samen plezier maken staat voorop.</p>
+        <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-6 py-2.5 text-sm hover:bg-cta-hover inline-block cursor-pointer">Inschrijven</a>
+      </div>
+
+      <!-- Agility -->
+      <div id="agility" class="clay-card p-6 md:p-8 flex flex-col md:flex-row gap-6">
+        <div class="md:w-48 flex-shrink-0">
+          <img src="images/agility1.jpg" alt="Agility training" class="w-full h-40 md:h-full object-cover rounded-clay" loading="lazy">
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-heading text-2xl text-primary-dark">Agility</h3>
+            <span class="clay-btn bg-mint/50 text-primary-dark font-bold px-4 py-1 text-sm">€110</span>
+          </div>
+          <div class="flex gap-4 text-xs text-primary-dark/50 mb-3">
+            <span>12 lessen</span> <span>Hond min. 1 jaar</span> <span>Wo-avond & zo-ochtend</span>
+          </div>
+          <p class="font-body text-primary-dark/70 text-sm mb-3">Na de Fun & Focus-cursus is het mogelijk om door te stromen naar de agilitytraining. Agility is een leuke en sportieve manier om actief met je hond bezig te zijn. Op een speelse manier werk je samen toe naar een hecht teamgevoel.</p>
+          <p class="font-body text-primary-dark/70 text-sm mb-3">Het doel van agility is om zo snel mogelijk een parcours met verschillende hindernissen in de juiste volgorde te voltooien. Een goede samenwerking tussen baas en hond is hierbij essentieel.</p>
+          <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-6 py-2.5 text-sm hover:bg-cta-hover inline-block cursor-pointer">Inschrijven</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Activiteiten -->
+  <section class="bg-white py-16 px-4 md:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-heading text-3xl text-primary-dark mb-8 text-center">Overige activiteiten</h2>
+      <p class="font-body text-primary-dark/70 mb-8 text-center max-w-2xl mx-auto">Jaarlijks organiseert HBSV een aantal leuke en afwisselende activiteiten voor alle leden van de vereniging.</p>
+      <div class="grid sm:grid-cols-3 gap-6">
+        <div class="clay-card p-6 text-center">
+          <div class="w-12 h-12 bg-peach/50 rounded-clay flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-heading text-lg text-primary-dark mb-2">Spelavonden</h3>
+          <p class="font-body text-sm text-primary-dark/70">Tijdens de vakantieperiode worden spelavonden georganiseerd voor alle cursisten.</p>
+        </div>
+        <div class="clay-card p-6 text-center">
+          <div class="w-12 h-12 bg-babyblue/50 rounded-clay flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-heading text-lg text-primary-dark mb-2">Combisport</h3>
+          <p class="font-body text-sm text-primary-dark/70">Elementen uit agility, gehoorzaamheid en fun-oefeningen gecombineerd. Laagdrempelig en leuk.</p>
+        </div>
+        <div class="clay-card p-6 text-center">
+          <div class="w-12 h-12 bg-mint/50 rounded-clay flex items-center justify-center mx-auto mb-3">
+            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          </div>
+          <h3 class="font-heading text-lg text-primary-dark mb-2">Rally-O</h3>
+          <p class="font-body text-sm text-primary-dark/70">Een dynamische hondensport met een parcours van bordjes. Nadruk op samenwerking en plezier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 px-4 md:px-6 lg:px-8 text-center">
+    <h2 class="font-heading text-3xl text-primary-dark mb-4">Zin om te starten?</h2>
+    <p class="font-body text-primary-dark/70 mb-6">Schrijf je hond in voor een van onze cursussen.</p>
+    <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-10 py-4 text-lg hover:bg-cta-hover cursor-pointer">Inschrijven</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary-dark text-white py-12 px-4 md:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-3 mb-4"><img src="images/logo.png" alt="HBSV Logo" class="h-10 rounded-lg brightness-200"><span class="font-heading text-xl">HBSV Boxmeer</span></div>
+        <p class="font-body text-white/70 text-sm">Honden Behendigheid Sport Vereniging.<br>Al meer dan 25 jaar een vereniging in beweging!</p>
+      </div>
+      <div>
+        <h4 class="font-heading text-lg mb-3">Cursussen</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="#puppy-start" class="hover:text-white transition-colors duration-200 cursor-pointer">Puppy Start</a></li>
+          <li><a href="#puppy-vervolg" class="hover:text-white transition-colors duration-200 cursor-pointer">Puppy Vervolg</a></li>
+          <li><a href="#agility" class="hover:text-white transition-colors duration-200 cursor-pointer">Agility</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-heading text-lg mb-3">Contact</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li>Sint Cornelisstraat 25, 5827 AJ Vortum-Mullem</li>
+          <li><a href="mailto:hondenschoolhbsv@gmail.com" class="hover:text-white transition-colors duration-200 cursor-pointer">hondenschoolhbsv@gmail.com</a></li>
+          <li><a href="https://maps.google.com/?cid=94207874774575320" target="_blank" rel="noopener" class="hover:text-white transition-colors duration-200 cursor-pointer">📍 Route via Google Maps</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-white/10 text-center text-sm text-white/50">
+      <p>Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white transition-colors duration-200 cursor-pointer underline">Code Lieshout</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

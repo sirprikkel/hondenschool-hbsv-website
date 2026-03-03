@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team — Hondenschool HBSV Boxmeer</title>
+  <meta name="description" content="Maak kennis met het instructeursteam van Hondenschool HBSV Boxmeer.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&family=Varela+Round&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7C3AED', 'primary-light': '#A78BFA', 'primary-dark': '#4C1D95',
+            cta: '#22C55E', 'cta-hover': '#16A34A', bg: '#FAF5FF',
+            peach: '#FDBCB4', babyblue: '#ADD8E6', mint: '#98FF98', lilac: '#E6E6FA',
+          },
+          fontFamily: { heading: ['Varela Round','sans-serif'], body: ['Nunito Sans','sans-serif'] },
+          borderRadius: { 'clay': '20px' },
+        }
+      }
+    }
+  </script>
+  <style>
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+    .clay-card { border-radius: 20px; border: 3px solid rgba(124,58,237,0.15); box-shadow: inset -2px -2px 8px rgba(255,255,255,0.8), 4px 4px 12px rgba(124,58,237,0.12); background: #FFF; transition: transform 200ms ease-out, box-shadow 200ms ease-out; }
+    .clay-card:hover { transform: translateY(-4px); box-shadow: inset -2px -2px 8px rgba(255,255,255,0.8), 6px 8px 18px rgba(124,58,237,0.18); }
+    .clay-btn { border-radius: 16px; border: 3px solid transparent; box-shadow: inset -1px -1px 4px rgba(255,255,255,0.6), 3px 3px 8px rgba(0,0,0,0.1); transition: transform 200ms ease-out; cursor: pointer; }
+    .clay-btn:active { transform: scale(0.97); }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Nunito Sans', sans-serif; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Varela Round', sans-serif; }
+    .mobile-menu { transform: translateX(100%); transition: transform 300ms ease-out; }
+    .mobile-menu.open { transform: translateX(0); }
+  </style>
+</head>
+<body class="bg-bg text-primary-dark">
+
+  <!-- Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b-3 border-primary/10 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="flex items-center gap-3 cursor-pointer"><img src="images/logo.png" alt="HBSV Logo" class="h-10 md:h-12 rounded-lg"><span class="font-heading text-lg md:text-xl text-primary-dark">HBSV</span></a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Home</a>
+        <a href="cursussen.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Cursussen</a>
+        <a href="team.html" class="font-body font-semibold text-primary hover:text-primary-dark transition-colors duration-200 cursor-pointer">Team</a>
+        <a href="galerij.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Galerij</a>
+        <a href="contact.html" class="font-body font-semibold text-primary-dark/70 hover:text-primary transition-colors duration-200 cursor-pointer">Contact</a>
+        <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-5 py-2.5 hover:bg-cta-hover min-h-[44px] flex items-center">Inschrijven</a>
+      </div>
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('open')" class="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu">
+        <svg class="w-7 h-7 text-primary-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-72 h-full bg-white z-50 shadow-2xl p-6 flex flex-col gap-4">
+      <button onclick="document.getElementById('mobileMenu').classList.toggle('open')" class="self-end min-w-[44px] min-h-[44px] flex items-center justify-center cursor-pointer" aria-label="Sluiten">
+        <svg class="w-7 h-7 text-primary-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <a href="index.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Home</a>
+      <a href="cursussen.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Cursussen</a>
+      <a href="team.html" class="font-heading text-lg text-primary py-2 cursor-pointer">Team</a>
+      <a href="galerij.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Galerij</a>
+      <a href="contact.html" class="font-heading text-lg text-primary-dark/70 py-2 cursor-pointer">Contact</a>
+      <a href="inschrijven.html" class="clay-btn bg-cta text-white font-bold px-5 py-3 text-center hover:bg-cta-hover cursor-pointer mt-4">Inschrijven</a>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="py-12 md:py-16 px-4 md:px-6 lg:px-8 text-center">
+    <h1 class="font-heading text-4xl md:text-5xl text-primary-dark mb-4">Ons team</h1>
+    <p class="font-body text-lg text-primary-dark/60 max-w-2xl mx-auto">Geschoolde en ervaren instructeurs met passie voor honden. Allemaal vrijwilligers die het met liefde doen.</p>
+  </section>
+
+  <!-- Team grid -->
+  <section class="pb-16 px-4 md:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+
+      <div class="clay-card p-5 text-center">
+        <img src="images/john.jpg" alt="John" class="w-24 h-24 rounded-full object-cover mx-auto mb-3 border-3 border-primary/20" loading="lazy">
+        <h3 class="font-heading text-lg text-primary-dark">John</h3>
+        <p class="font-body text-xs text-primary-dark/50">Instructeur</p>
+      </div>
+
+      <div class="clay-card p-5 text-center">
+        <img src="images/marleen.jpg" alt="Marleen" class="w-24 h-24 rounded-full object-cover mx-auto mb-3 border-3 border-primary/20" loading="lazy">
+        <h3 class="font-heading text-lg text-primary-dark">Marleen</h3>
+        <p class="font-body text-xs text-primary-dark/50">Instructeur</p>
+      </div>
+
+      <div class="clay-card p-5 text-center">
+        <img src="images/silvia-h.jpeg" alt="Silvia H" class="w-24 h-24 rounded-full object-cover mx-auto mb-3 border-3 border-primary/20" loading="lazy">
+        <h3 class="font-heading text-lg text-primary-dark">Silvia H</h3>
+        <p class="font-body text-xs text-primary-dark/50">Instructeur</p>
+      </div>
+
+      <div class="clay-card p-5 text-center">
+        <img src="images/floske.jpeg" alt="Floske" class="w-24 h-24 rounded-full object-cover mx-auto mb-3 border-3 border-primary/20" loading="lazy">
+        <h3 class="font-heading text-lg text-primary-dark">Floske</h3>
+        <p class="font-body text-xs text-primary-dark/50">Instructeur</p>
+      </div>
+
+      <div class="clay-card p-5 text-center">
+        <img src="images/karolien.jpeg" alt="Karolien" class="w-24 h-24 rounded-full object-cover mx-auto mb-3 border-3 border-primary/20" loading="lazy">
+        <h3 class="font-heading text-lg text-primary-dark">Karolien</h3>
+        <p class="font-body text-xs text-primary-dark/50">Instructeur</p>
+      </div>
+
+      <div class="clay-card p-5 text-center">
+        <img src="images/annemieke.jpeg" alt="Annemieke" class="w-24 h-24 rounded-full object-cover mx-auto mb-3 border-3 border-primary/20" loading="lazy">
+        <h3 class="font-heading text-lg text-primary-dark">Annemieke</h3>
+        <p class="font-body text-xs text-primary-dark/50">Instructeur</p>
+      </div>
+
+      <div class="clay-card p-5 text-center">
+        <img src="images/silvia-t.jpeg" alt="Silvia T" class="w-24 h-24 rounded-full object-cover mx-auto mb-3 border-3 border-primary/20" loading="lazy">
+        <h3 class="font-heading text-lg text-primary-dark">Silvia T</h3>
+        <p class="font-body text-xs text-primary-dark/50">Instructeur</p>
+      </div>
+
+      <div class="clay-card p-5 text-center">
+        <img src="images/marinka.jpeg" alt="Marinka" class="w-24 h-24 rounded-full object-cover mx-auto mb-3 border-3 border-primary/20" loading="lazy">
+        <h3 class="font-heading text-lg text-primary-dark">Marinka</h3>
+        <p class="font-body text-xs text-primary-dark/50">Instructeur</p>
+      </div>
+
+      <div class="clay-card p-5 text-center">
+        <img src="images/oscar.jpeg" alt="Oscar" class="w-24 h-24 rounded-full object-cover mx-auto mb-3 border-3 border-primary/20" loading="lazy">
+        <h3 class="font-heading text-lg text-primary-dark">Oscar</h3>
+        <p class="font-body text-xs text-primary-dark/50">Instructeur</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary-dark text-white py-12 px-4 md:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+      <div><div class="flex items-center gap-3 mb-4"><img src="images/logo.png" alt="HBSV Logo" class="h-10 rounded-lg brightness-200"><span class="font-heading text-xl">HBSV Boxmeer</span></div><p class="font-body text-white/70 text-sm">Al meer dan 25 jaar een vereniging in beweging!</p></div>
+      <div><h4 class="font-heading text-lg mb-3">Pagina's</h4><ul class="space-y-2 text-sm text-white/70"><li><a href="index.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Home</a></li><li><a href="cursussen.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Cursussen</a></li><li><a href="galerij.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Galerij</a></li></ul></div>
+      <div><h4 class="font-heading text-lg mb-3">Contact</h4><ul class="space-y-2 text-sm text-white/70"><li>Sint Cornelisstraat 25, 5827 AJ Vortum-Mullem</li><li><a href="mailto:hondenschoolhbsv@gmail.com" class="hover:text-white transition-colors duration-200 cursor-pointer">hondenschoolhbsv@gmail.com</a></li></ul></div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-8 pt-6 border-t border-white/10 text-center text-sm text-white/50"><p>Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white transition-colors duration-200 cursor-pointer underline">Code Lieshout</a></p></div>
+  </footer>
+
+</body>
+</html>
